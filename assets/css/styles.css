@@ -1,0 +1,46 @@
+/* Siit hakkab loe rohkem */
+
+.exstra {
+  display: none;
+}
+
+p {
+  display: inline;
+}
+
+input[type="checkbox"] {
+  height: 2em;
+  display: block;
+  appearance: none;
+}
+
+label {
+  position: relative;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+label:before {
+  content: "Loe rohkem";
+}
+
+input[type="checkbox"]:checked ~ label:before {
+  content: "Loe vähem";
+}
+
+.exstra:has( ~ input[type="checkbox"]:checked) {
+  display: inline;
+}
+
+/* Siit lõppeb loe rohkem */
+
+div {
+}
+
+@media (min-width: 576px) {
+  .proov {
+  }
+}
+
